@@ -85,7 +85,7 @@ function batHit(){
 	mask_index = BtMelee1HB
 	var golpeadoahora = ds_list_create()
 	var _dam = In[Inind][0].dam
-	var hits = instance_place_list(x+(36*face),y-8,o_enemy, golpeadoahora, false);
+	var hits = instance_place_list(x+(36*face),y-8, In[Inind][0].tarj, golpeadoahora, false);
 	if hits >= 0{
 		for (var i=0;i<hits;i++){
 			var hitID = ds_list_find_value(golpeadoahora, i);
@@ -116,7 +116,7 @@ function fir(){
 		if floor(image_index) == 2 && shot == false{
 			shot = true;
 			var _dir = point_direction(0, 0, face, 0);
-			var _inst = instance_create_layer(x +21 * face, y - 7, "bulet", Bul);
+			var _inst = instance_create_layer(x +21 * face, y - 7, "bulet", In[Inind][0].bullfir);
 			var _dama = In[Inind][0].dam;
 			In[Inind][1] -= 1
 			with (_inst){

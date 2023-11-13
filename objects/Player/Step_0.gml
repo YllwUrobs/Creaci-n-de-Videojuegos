@@ -41,7 +41,7 @@ switch(wepn) {
 					image_speed = 0;
 				}
 				for (i=0; i<(array_length(In)); i++){
-					In[i] = -1;
+					In[i][0] = -1;
 				}
 		}
 		break;
@@ -91,9 +91,9 @@ switch(wepn) {
 				if image_index >= image_number-1{
 					image_speed = 0;
 				}
-				//for (i=0; i<(array_length(In)); i++){
-				//	In[i] = -1;
-				//}
+				for (i=0; i<(array_length(In)); i++){
+					In[i][0] = -1;
+				}
 		}
 		break;
 	case wpn.SHOTGUN : 
@@ -145,7 +145,7 @@ switch(wepn) {
 					image_speed = 0;
 				}
 				for (i=0; i<(array_length(In)); i++){
-					In[i] = -1;
+					In[i][0] = -1;
 				}
 		}
 		break
@@ -175,7 +175,7 @@ if keyboard_check_pressed(ord("N")){
 	}
 }
 
-if keyboard_check_pressed(ord("Q")) && In[Inind] != -1 {
+if keyboard_check_pressed(ord("Q")) && In[Inind][0] != -1 {
 	var _it = instance_create_depth(x,y,1,o_item)
 	with (_it){
 		item = other.In[other.Inind][0]

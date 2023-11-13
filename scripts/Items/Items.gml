@@ -8,10 +8,12 @@ function create_item (_name, _description, _sprite, _icon) constructor {
 	icon = _icon
 }
 
-function create_weapon (_name, _description, _sprite, _icon, _wpnst, _anim, _dam, _maxbul) : create_item(_name, _description, _sprite, _icon) constructor {
+function create_weapon (_name, _description, _sprite, _icon, _wpnst, _anim, _dam, _tarj, _bullfir, _maxbul) : create_item(_name, _description, _sprite, _icon) constructor {
 	wpnst = _wpnst
 	anim = _anim
 	dam = _dam
+	tarj = _tarj
+	bullfir = _bullfir
 	maxbul = _maxbul
 }
 
@@ -32,6 +34,8 @@ bBate : new create_weapon(
 		wpn.BATE, 
 		[BtIdle, BtWalk, BtRun, BtMelee, BtHurt],
 		2,
+		o_enemy,
+		noone,
 		noone),
 
 ShtGun : new create_weapon(
@@ -42,6 +46,8 @@ ShtGun : new create_weapon(
 			wpn.SHOTGUN, 
 			[ShtIdle, ShtWalk, ShtRun, Shot, ShtHurt],
 			4,
+			o_enemy,
+			Bul,
 			2),
 
 Crss : new create_weapon(
@@ -52,6 +58,8 @@ Crss : new create_weapon(
 			wpn.BATE,
 			[CrossIdle, CrossWalk, CrossRun, CrossMelee, CrossHurt],
 			4,
+			o_enemy,
+			noone,
 			noone),
 		
 ShtGunB : new create_weapon(
@@ -62,6 +70,8 @@ ShtGunB : new create_weapon(
 			wpn.SHOTGUN, 
 			[ShtBIdle, ShtBWalk, ShtBRun, ShotB, ShtBHurt],
 			6,
+			o_enemy,
+			Bul,
 			6),
 
 /*-----------------Consumibles---------------------*/

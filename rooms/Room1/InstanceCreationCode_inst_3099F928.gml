@@ -1,3 +1,3 @@
 item = global.item_list.Bull;
 
-cant = 5
+cant = 15

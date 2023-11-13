@@ -5,7 +5,7 @@ for (i=0; i<(array_length(In)); i++){
 	else draw_sprite(CasillaUpsc, 4, 100, 100 + 74  * i);
 	if In[i][0] != -1 {
 		draw_sprite(In[i][0].icon,0,100, 100 + 74 * i) 
-		draw_text(108, 100 + 74 * i, In[i][1])
+		if In[i][0].wpnst == wpn.SHOTGUN draw_text(108, 100 + 74 * i, In[i][1])
 	}
 }
 
