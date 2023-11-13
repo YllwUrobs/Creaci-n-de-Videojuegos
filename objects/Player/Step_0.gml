@@ -167,20 +167,20 @@ if keyboard_check_pressed(ord("U")){
 if keyboard_check_pressed(ord("N")){
 	if Inind == array_length(In)-1 Inind = 0;
 	else Inind ++
-	if In[Inind] == -1{
+	if In[Inind][0] == -1{
 		wepn = wpn.FISTS;
 	}
 	else {
-		wepn = In[Inind].wpnst
+		wepn = In[Inind][0].wpnst
 	}
 }
 
 if keyboard_check_pressed(ord("Q")) && In[Inind] != -1 {
 	var _it = instance_create_depth(x,y,1,o_item)
 	with (_it){
-		item = other.In[other.Inind]
+		item = other.In[other.Inind][0]
 	}
-	In[Inind] = -1
+	In[Inind][0] = -1
 	wepn = wpn.FISTS
 }
 

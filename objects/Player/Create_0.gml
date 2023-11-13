@@ -13,7 +13,10 @@ sht_sprites = [ShtIdle1, ShtWalk1, ShtRun1, Shot1, ShtHurt1, ShtDead1];
 state = states.IDLE
 wepn = wpn.FISTS
 
-In = array_create(4, -1);
+for(i=0; i<4; i++){
+	In[i][0] = -1
+	In[i][1] = 0;
+}
 Inind = 0;
 
 

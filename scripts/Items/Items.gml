@@ -8,10 +8,11 @@ function create_item (_name, _description, _sprite, _icon) constructor {
 	icon = _icon
 }
 
-function create_weapon (_name, _description, _sprite, _icon, _wpnst, _anim, _dam) : create_item(_name, _description, _sprite, _icon) constructor {
+function create_weapon (_name, _description, _sprite, _icon, _wpnst, _anim, _dam, _maxbul) : create_item(_name, _description, _sprite, _icon) constructor {
 	wpnst = _wpnst
 	anim = _anim
 	dam = _dam
+	maxbul = _maxbul
 }
 
 function create_consum (_name, _description, _sprite, _icon, _cantmx, _effect) : create_item(_name, _description, _sprite, _icon) constructor {
@@ -30,7 +31,8 @@ bBate : new create_weapon(
 		BateIc, 
 		wpn.BATE, 
 		[BtIdle, BtWalk, BtRun, BtMelee, BtHurt],
-		2),
+		2,
+		noone),
 
 ShtGun : new create_weapon(
 			"Escopeta",	
@@ -39,7 +41,8 @@ ShtGun : new create_weapon(
 			ShotgunIc, 
 			wpn.SHOTGUN, 
 			[ShtIdle, ShtWalk, ShtRun, Shot, ShtHurt],
-			4),
+			4,
+			2),
 
 Crss : new create_weapon(
 			"Cruz",
@@ -48,7 +51,8 @@ Crss : new create_weapon(
 			CrossIc,
 			wpn.BATE,
 			[CrossIdle, CrossWalk, CrossRun, CrossMelee, CrossHurt],
-			4),
+			4,
+			noone),
 		
 ShtGunB : new create_weapon(
 			"Escopeta",	
@@ -57,6 +61,7 @@ ShtGunB : new create_weapon(
 			ShotgunBIc, 
 			wpn.SHOTGUN, 
 			[ShtBIdle, ShtBWalk, ShtBRun, ShotB, ShtBHurt],
+			6,
 			6),
 
 /*-----------------Consumibles---------------------*/
@@ -72,6 +77,26 @@ Bot : new create_consum(
 				tar.life += 5
 				if tar.life > tar.lifemx tar.life = tar.lifemx
 				tar.conselus = true
+				}
+			}),
+			
+Bull : new create_consum(
+			"Bullets",
+			"Munición para armas",
+			Bull,
+			BullInc,
+			30,
+			function(tar){
+				if tar.wepn == wpn.SHOTGUN{
+					if tar.In[tar.Inind][1] < tar.In[tar.Inind][0].maxbul{
+						for (i = tar.incons[tar.consel][1]; i>0;i--){
+							if (tar.In[tar.Inind][1] + i <= tar.In[tar.Inind][0].maxbul){
+							tar.In[tar.Inind][1] += i; 
+							tar.incons[tar.consel][1] -= i
+							if tar.incons[tar.consel][1] <=0 tar.incons[tar.consel][0] = -1 
+							}
+						}
+					}
 				}
 			})
 

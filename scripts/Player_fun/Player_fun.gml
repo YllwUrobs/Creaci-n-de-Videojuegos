@@ -84,7 +84,7 @@ function batHit(){
 	if state == states.ATACK{
 	mask_index = BtMelee1HB
 	var golpeadoahora = ds_list_create()
-	var _dam = In[Inind].dam
+	var _dam = In[Inind][0].dam
 	var hits = instance_place_list(x+(36*face),y-8,o_enemy, golpeadoahora, false);
 	if hits >= 0{
 		for (var i=0;i<hits;i++){
@@ -106,7 +106,7 @@ function batHit(){
 }
 
 function fir(){
-	if keyboard_check(ord("F")) && can_fire{
+	if keyboard_check(ord("F")) && can_fire && In[Inind][1]{
 		state = states.SHOT;
 		image_index = 0;
 		can_fire = false;
@@ -117,7 +117,8 @@ function fir(){
 			shot = true;
 			var _dir = point_direction(0, 0, face, 0);
 			var _inst = instance_create_layer(x +21 * face, y - 7, "bulet", Bul);
-			var _dama = In[Inind].dam;
+			var _dama = In[Inind][0].dam;
+			In[Inind][1] -= 1
 			with (_inst){
 				dam = _dama;
 				speed = 10;
