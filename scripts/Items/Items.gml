@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 
 function create_item (_name, _description, _sprite, _icon) constructor {
-	name = _name
+	nem = _name
 	description = _description
 	sprite = _sprite
 	icon = _icon
@@ -14,7 +14,14 @@ function create_weapon (_name, _description, _sprite, _icon, _wpnst, _anim, _dam
 	dam = _dam
 }
 
+function create_consum (_name, _description, _sprite, _icon, _cantmx, _effect) : create_item(_name, _description, _sprite, _icon) constructor {
+	cantmx = _cantmx
+	effect = _effect
+}
+
 global.item_list = {
+
+/*-----------------Weapons--------------------*/
 
 bBate : new create_weapon(
 		"Bate", 
@@ -51,5 +58,21 @@ ShtGunB : new create_weapon(
 			wpn.SHOTGUN, 
 			[ShtBIdle, ShtBWalk, ShtBRun, ShotB, ShtBHurt],
 			6),
+
+/*-----------------Consumibles---------------------*/
+
+Bot : new create_consum(
+			"Botiquín",
+			"Con esto puedo curarme",
+			Bot,
+			BotInc,
+			5,
+			function(tar){
+				if tar.life != tar.lifemx{
+				tar.life += 5
+				if tar.life > tar.lifemx tar.life = tar.lifemx
+				tar.conselus = true
+				}
+			})
 
 }

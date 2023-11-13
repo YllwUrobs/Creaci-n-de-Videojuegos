@@ -6,6 +6,15 @@ for (i=0; i<(array_length(In)); i++){
 	if In[i] != -1 draw_sprite(In[i].icon,0,100, 100 + 74 * i) 
 }
 
+for (i=0; i<(array_length(incons)); i++){
+	if i == consel draw_sprite(CasillaUpsc, 10, 400 + 74 * i, 580)
+	else draw_sprite(CasillaUpsc, 4, 400 + 74 * i, 580);
+	if incons[i][0] != -1 {
+		draw_sprite(incons[i][0].icon,0, 400 + 74 * i, 580) 
+		draw_text(408 + 74 * i, 580, incons[i][1])
+	}
+}
+
 var _lifeper = ceil(life/2)
 var _celper = (2 - ((_lifeper *2 - life)))/2
 for (i=0;i<_lifeper;i++){

@@ -151,6 +151,19 @@ switch(wepn) {
 		break
 }
 
+get_invinp()
+
+if keyboard_check_pressed(ord("U")){
+	if incons[consel][0] != -1{
+		incons[consel][0].effect(self);
+		if conselus == true{
+			incons[consel][1] -= 1
+			if incons[consel][1] <= 0 incons[consel][0] = -1
+			conselus = false
+		}
+	}
+}
+
 if keyboard_check_pressed(ord("N")){
 	if Inind == array_length(In)-1 Inind = 0;
 	else Inind ++

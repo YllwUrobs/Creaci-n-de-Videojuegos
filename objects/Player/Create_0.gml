@@ -16,6 +16,14 @@ wepn = wpn.FISTS
 In = array_create(4, -1);
 Inind = 0;
 
+
+for(i=0; i<4; i++){
+	incons[i][0] = -1
+	incons[i][1] = 0;
+}
+consel = 0;
+conselus = false
+
 frate = 30;
 can_fire = true;
 shot = false;
