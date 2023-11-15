@@ -36,6 +36,7 @@ switch(wepn) {
 				if sprite_index != player_sprites[4]{
 					sprite_index = player_sprites[4]
 					image_index = 0;
+					alarm[1] = 52
 				}
 				if image_index >= image_number-1{
 					image_speed = 0;
@@ -87,6 +88,7 @@ switch(wepn) {
 				if sprite_index != player_sprites[4]{
 					sprite_index = player_sprites[4]
 					image_index = 0;
+					alarm[1] = 52
 				}
 				if image_index >= image_number-1{
 					image_speed = 0;
@@ -140,6 +142,7 @@ switch(wepn) {
 				if sprite_index != player_sprites[4]{
 					sprite_index = player_sprites[4]
 					image_index = 0;
+					alarm[1] = 52
 				}
 				if image_index >= image_number-1{
 					image_speed = 0;

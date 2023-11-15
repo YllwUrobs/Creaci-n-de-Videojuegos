@@ -84,7 +84,7 @@ function atack(){
 		var golpeadoahora = ds_list_create()
 		var hits = instance_place_list(x+(36*face),y-8,Player, golpeadoahora, false);
 		if hits >= 0{
-			canatack = false;
+			//canatack = false;
 			alarm[0] = wait_time;
 			for (var i=0;i<hits;i++){
 				var hitID = ds_list_find_value(golpeadoahora, i);
@@ -107,3 +107,4 @@ function atack(){
 function stpflw(){
 	if point_distance(x,y,tarjet.x,tarjet.y) > rangesns state = enemystate.WANDER
 }
+

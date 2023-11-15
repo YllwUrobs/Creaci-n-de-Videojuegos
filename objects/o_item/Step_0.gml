@@ -33,7 +33,7 @@ if place_meeting(x,y,Player){
 						}
 					}
 				}
-				if (Player.incons[i][0] == item) && (Player.incons[i][1] <= item.cantmx){
+				/*if (Player.incons[i][0] == item) && (Player.incons[i][1] <= item.cantmx){
 					var index = i
 					for (i = cant; i>0; i--){
 						var newcant = Player.incons[index][1] + i
@@ -47,7 +47,7 @@ if place_meeting(x,y,Player){
 							}
 						}
 					}
-				}
+				}*/
 			}
 		}
 	}

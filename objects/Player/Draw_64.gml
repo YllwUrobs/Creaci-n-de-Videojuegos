@@ -18,15 +18,15 @@ for (i=0; i<(array_length(incons)); i++){
 	}
 }
 
-var _lifeper = ceil(life/2)
-var _celper = (2 - ((_lifeper *2 - life)))/2
+var _lifeper = ceil(lifemx/2)
+var _lifeperv = ceil(life/2)
 for (i=0;i<_lifeper;i++){
-	draw_sprite(Life71,0,100,100 + 14*i)
+	draw_sprite(Life71,0,40,100 + 14*i)
 }
-for (i=0;i<_lifeper;i++){
-	
-	if i == _lifeper -1 {
-		draw_sprite_part(Life,0,1,_celper,9,13,100,100+14*i)
-	} else draw_sprite(Life,0,100,100 + 14*i)
+for (i=0;i<_lifeperv;i++){
+	var _celper = (life - 2 * i) * 6.5
+	if i == _lifeperv -1 {
+		draw_sprite_part(Life,0,0,0, 9,_celper,40,100+14*i)
+	} else draw_sprite(Life,0,40,100 + 14*i)
 }
 

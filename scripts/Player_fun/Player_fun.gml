@@ -74,7 +74,7 @@ function col(){
 }
 
 function batHit(){
-	if keyboard_check(ord("F")){
+	if keyboard_check(ord("F")) && can_fire{
 		if state != states.ATACK{
 			state = states.ATACK
 			image_index = 0;
@@ -83,6 +83,8 @@ function batHit(){
 	}
 	if state == states.ATACK{
 	mask_index = BtMelee1HB
+	can_fire = false
+	alarm[0] = 13
 	var golpeadoahora = ds_list_create()
 	var _dam = In[Inind][0].dam
 	var hits = instance_place_list(x+(36*face),y-8, In[Inind][0].tarj, golpeadoahora, false);

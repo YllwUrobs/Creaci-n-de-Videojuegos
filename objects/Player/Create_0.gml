@@ -1,5 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+charor = global.charlist.Char1
 life = 50;
 lifemx = 50
 face = 1;

@@ -84,7 +84,7 @@ Bot : new create_consum(
 			5,
 			function(tar){
 				if tar.life != tar.lifemx{
-				tar.life += 5
+				tar.life += 10
 				if tar.life > tar.lifemx tar.life = tar.lifemx
 				tar.conselus = true
 				}
