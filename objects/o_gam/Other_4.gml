@@ -3,8 +3,8 @@ var _h = ceil(room_height/TS)
 
 global.mp_grid = mp_grid_create(0,0,_w, _h, TS, TS)
 
-mp_grid_add_instances(global.mp_grid, Wll, false)
-mp_grid_add_instances(global.mp_grid, o_enemy, false)
+mp_grid_add_instances(global.mp_grid, Wll, true)
+mp_grid_add_instances(global.mp_grid, o_enemy, true)
 
 
 
