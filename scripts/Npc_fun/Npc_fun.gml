@@ -58,7 +58,7 @@ function follow(){
 	path_timer = path_delay
 	var _canrech = mp_grid_path(global.mp_grid, path, x, y, Player.x, Player.y, true)
 	if _canrech{
-			path_start(path, vel, path_action_stop, false)
+			path_start(path, vel, path_action_stop, true)
 	} else state = enemystate.WANDER
 	var _dis = point_distance(x,y,tarjet.x,tarjet.y)
 		//var _speedf = vel;

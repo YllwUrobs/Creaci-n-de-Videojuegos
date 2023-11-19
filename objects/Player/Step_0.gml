@@ -182,6 +182,7 @@ if keyboard_check_pressed(ord("Q")) && In[Inind][0] != -1 {
 	var _it = instance_create_depth(x,y,1,o_item)
 	with (_it){
 		item = other.In[other.Inind][0]
+		cant = other.In[other.Inind][1]
 	}
 	In[Inind][0] = -1
 	wepn = wpn.FISTS
