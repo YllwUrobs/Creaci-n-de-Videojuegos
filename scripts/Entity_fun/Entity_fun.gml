@@ -43,13 +43,12 @@ function isDead(){
 
 /*--------------------------------------------------------------*/
 
-function pushaway(_tid, _sid, _dam, _tim){
+function pushaway(_tid, _sid, _dam, _tim, _dis){
 	if (_tid.object_index != Player) {
 		with _tid{
 		life -= _dam;
 		var _dead = isDead()
 		path_end();
-		if _dead var _dis = 4 else _dis = 3
 		var _dir = point_direction(_sid.x,_sid.y,x,y)
 		hsp += lengthdir_x(_dis,_dir)
 		vsp += lengthdir_y(_dis,_dir)
@@ -60,7 +59,6 @@ function pushaway(_tid, _sid, _dam, _tim){
 		life -= _dam;
 		var _dead = isDead()
 		path_end();
-		if _dead var _dis = 4 else _dis = 3
 		var _dir = point_direction(_sid.x,_sid.y,x,y)
 		hsp += lengthdir_x(_dis,_dir)
 		vsp += lengthdir_y(_dis,_dir)

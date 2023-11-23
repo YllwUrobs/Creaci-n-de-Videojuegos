@@ -20,7 +20,7 @@ ydes = y;
 range = 300;
 dir = 0;
 
-rangesns = 150;
+rangesns = 170;
 enemy_hit = ds_list_create();
 dam = 15
 canatack = true;

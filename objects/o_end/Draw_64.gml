@@ -1,8 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-draw_text(100,100,"The game demostration has ended")
-draw_text(100,125,"Thanks for playing")
-draw_text(400,400,"Press E to go back to the main menu")
+draw_text(100,100,"La demostración del juego ha terminado")
+draw_text(100,125,"Gracias por jugar")
+draw_text(400,400,"Presiona E para volver al menu")
 
 
 
