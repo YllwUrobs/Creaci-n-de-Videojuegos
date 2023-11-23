@@ -79,6 +79,7 @@ function batHit(){
 			state = states.ATACK
 			image_index = 0;
 			ds_list_clear(golpeados);
+			audio_play_sound(Swing,1,false)
 		}
 	}
 	if state == states.ATACK{
@@ -113,6 +114,7 @@ function fir(){
 		image_index = 0;
 		can_fire = false;
 		alarm = frate;
+		audio_play_sound(Fire,1,false)
 	}
 	if sprite_index = sht_sprites[3]{
 		if floor(image_index) == 2 && shot == false{

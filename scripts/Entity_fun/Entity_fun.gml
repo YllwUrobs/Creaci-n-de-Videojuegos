@@ -1,5 +1,6 @@
 
 function damage(_tid, _sid, _dam, _tim){
+	audio_play_sound(Hit,1,false)
 	if (_tid.object_index != Player) {
 		with _tid{
 		life -= _dam;

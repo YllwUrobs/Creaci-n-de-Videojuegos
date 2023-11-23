@@ -78,6 +78,7 @@ function atack(){
 		sprite_index = Sprite45		
 		image_index = 0;
 		ds_list_clear(enemy_hit)
+		audio_play_sound(Knife,1,false)
 	}
 	else {
 		mask_index = BtMelee1HB
@@ -105,6 +106,6 @@ function atack(){
 }
 
 function stpflw(){
-	if point_distance(x,y,tarjet.x,tarjet.y) > rangesns state = enemystate.WANDER
+	if point_distance(x,y,tarjet.x,tarjet.y) > (rangesns + 100) state = enemystate.WANDER
 }
 
