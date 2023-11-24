@@ -5,7 +5,7 @@ lifemx = 25
 ovel = 4
 vel = 4;
 face = 1;
-enemysprite = [Sprite11, Sprite43, Sprite1142, Sprite49]
+enemysprite = [Sprite11, Sprite43, Sprite1142, Sprite49, Sprite45]
 
 xp = x
 yp = y

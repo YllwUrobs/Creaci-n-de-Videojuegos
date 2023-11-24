@@ -74,8 +74,8 @@ function follow(){
 }
 
 function atack(){
-	if sprite_index != Sprite45{
-		sprite_index = Sprite45		
+	if sprite_index != enemysprite[4]{
+		sprite_index = enemysprite[4]		
 		image_index = 0;
 		ds_list_clear(enemy_hit)
 		audio_play_sound(Knife,1,false)

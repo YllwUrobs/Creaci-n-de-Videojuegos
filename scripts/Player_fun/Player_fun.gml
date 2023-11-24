@@ -6,10 +6,10 @@ down = 0;
 }
 
 function get_input(){
-	if keyboard_check(ord("A")) left = 1;
-	if keyboard_check(ord("D")) right = 1;
-	if keyboard_check(ord("W")) up = 1;
-	if keyboard_check(ord("S")) down = 1;
+	if keyboard_check(vk_left) left = 1;
+	if keyboard_check(vk_right) right = 1;
+	if keyboard_check(vk_up) up = 1;
+	if keyboard_check(vk_down) down = 1;
 }
 
 function calc_mov(){
@@ -74,7 +74,7 @@ function col(){
 }
 
 function batHit(){
-	if keyboard_check(ord("F")) && can_fire{
+	if keyboard_check(ord("D")) && can_fire{
 		if state != states.ATACK{
 			state = states.ATACK
 			image_index = 0;
@@ -109,7 +109,7 @@ function batHit(){
 }
 
 function fir(){
-	if keyboard_check(ord("F")) && can_fire && In[Inind][1]{
+	if keyboard_check(ord("D")) && can_fire && In[Inind][1]{
 		state = states.SHOT;
 		image_index = 0;
 		can_fire = false;

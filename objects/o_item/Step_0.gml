@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 sprite_index = item.sprite
 if place_meeting(x,y,Player){
-	if keyboard_check_pressed(ord("E"))
+	if keyboard_check_pressed(vk_space)
 	{
 		if (is_instanceof(item, create_weapon)){
 			if Player.In[Player.Inind][0] == -1 {Player.In[Player.Inind][0] = item; Player.In[Player.Inind][1] = cant; Player.wepn = item.wpnst; Player.pickup = false instance_destroy()}
